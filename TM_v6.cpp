@@ -75,10 +75,8 @@ struct TuringMachine
 
             currentState = transition.nextState;
 
-            // Display the current state of the tape
             cout << "Current State: q" << currentState << ", Tape: " << tape << ", Head Position: " << headPosition << "\n";
 
-            // Ensure the head position is within the bounds of the tape
             if (headPosition < 0 || headPosition >= int(tape.size()))
             {
                 cout << "Head moved out of tape bounds.\n";
@@ -118,7 +116,7 @@ struct TuringMachine
 
 int main()
 {
-    TuringMachine tm(2, 0); // Initialize TM with 2 states, start state is 0
+    TuringMachine tm(2, 0);
     tm.addSymbol('a');
     tm.addSymbol('b');
     tm.addSymbol('#');
@@ -132,10 +130,7 @@ int main()
     tm.defineTransition(1, 'b', 1, 'b', 'R');
     tm.defineTransition(1, '#', 1, '#', 'N');
 
-    // Display TM configuration
     tm.displayConfiguration();
-
-    // Execute TM on an input tape starting at a specific head position
 
     // TEST 1 : REJECTED
     tm.execute("ab#", 0);
