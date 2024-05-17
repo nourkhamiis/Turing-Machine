@@ -133,7 +133,7 @@ int main()
     // TEST 1 : ACCEPTED
     tm.execute("ab#", 0);
 
-    // TEST 2 : REJECTED
+    // TEST 2 : ACCEPTED
     tm.execute("aabaa#",0);
 
     // TEST 3 : ACCEPTED
@@ -142,7 +142,7 @@ int main()
     // TEST 4 : ACCEPTED
     tm.execute("bbbbbb#",0);
 
-    // TEST 5 : REJECTED
+    // TEST 5 : ACCEPTED
     tm.execute("aaaaa#",0);
 
     // TEST 6 : ACCEPTED
